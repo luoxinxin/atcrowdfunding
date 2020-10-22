@@ -12,5 +12,7 @@
         <appender-ref ref="STDOUT"/>
     </root>
 
-    <logger name="com.luoxinxin.crowd.mapper" level="DEBUG"/>
+    <logger name="" level="INFO"/>
+    <logger name="com.luoxinxin.crowd.mapper" level="ERROR"/>
+    <logger name="com.luoxinxin.crowd.test" level="INFO"/>
 </configuration>
