@@ -5,8 +5,7 @@
 
     <context id="luoxinxinTables" targetRuntime="MyBatis3">
         <commentGenerator>
-            <property name="suppressDate" value="true"/>
-            <property name="suppressAllComments" value="true" />
+            <property name="suppressAllComments" value="true"/>
         </commentGenerator>
 
         <jdbcConnection
@@ -21,7 +20,7 @@
             <property name="forceBigDecimals" value="false" />
         </javaTypeResolver>
 
-        <javaModelGenerator targetPackage="entity" targetProject="./src/main/java">
+        <javaModelGenerator targetPackage="com.luoxinxin.crowd.entity" targetProject="./src/main/java">
             <property name="enableSubPackages" value="false"/>
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
