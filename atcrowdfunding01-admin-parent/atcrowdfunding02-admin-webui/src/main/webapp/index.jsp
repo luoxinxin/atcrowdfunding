@@ -37,20 +37,98 @@
                 // $.get();
                 // $.post();
                 $.ajax({
-                    "url": "send/array.html",
+                    "url": "send/array/one.html",
                     "type": "post",
                     "data": {
                         "array":[5,8,12]
                     },
                     "dataType": "text",
                     "success": function(response) {
+                        alert(response);
 
                     },
                     "error": function(response) {
-
+                        alert(response);
                     }
                 })
             })
+
+            $("#btn2").click(function () {
+                // $.get();
+                // $.post();
+                $.ajax({
+                    "url": "send/array/two.html",
+                    "type": "post",
+                    "data": {
+                        "array[0]":5,
+                        "array[1]":8,
+                        "array[2]":12
+                    },
+                    "dataType": "text",
+                    "success": function(response) {
+                        alert(response);
+
+                    },
+                    "error": function(response) {
+                        alert(response);
+                    }
+                })
+            })
+
+            var array = [5,8,12];
+            var requestBody = JSON.stringify(array);
+
+            $("#btn3").click(function () {
+                // $.get();
+                // $.post();
+                $.ajax({
+                    "url": "send/array/three.html",
+                    "type": "post",
+                    "data": requestBody,
+                    "contentType":"application/json;charset=UTF-8",
+                    "dataType": "text",
+                    "success": function(response) {
+                        alert(response);
+
+                    },
+                    "error": function(response) {
+                        alert(response);
+                    }
+                })
+            })
+
+            $("#btn4").click(function (){
+                var student = {
+                    "stuId":5,
+                    "stuName":"tom",
+                    "address":{
+                        "province":"shanghai",
+                        "city":"huangpu",
+                        "street":"hello"
+                    },
+                    "schoolList":[
+                        {
+                            "subjectName":"shuxue",
+                            "subjectScore":22
+                        }
+                    ],
+                    "map":{
+                        "yingyu":"100",
+                        "shuxue":"20"
+                    }
+                }
+
+                var requestBody = JSON.stringify(student);
+                $.ajax({
+                    "url":"send/compose/object.html",
+                    "type":"post",
+                    "data":requestBody,
+                    "contentType":""
+                })
+            })
+
+
+
         })
     </script>
 </head>
@@ -61,5 +139,13 @@
     <br/>
 
     <button id="btn1">Send [5,8,12] One</button>
+
+    <br/>
+
+    <button id="btn2">Send [5,8,12] Two</button>
+
+    <br/>
+
+    <button id="btn3">Send [5,8,12] Three</button>
 </body>
 </html>
