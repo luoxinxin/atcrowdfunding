@@ -66,5 +66,16 @@ public class Student {
     public void setMap(Map<String, String> map) {
         this.map = map;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "stuId=" + stuId +
+                ", stuName='" + stuName + '\'' +
+                ", address=" + address +
+                ", subjectList=" + subjectList +
+                ", map=" + map +
+                '}';
+    }
 }
 
