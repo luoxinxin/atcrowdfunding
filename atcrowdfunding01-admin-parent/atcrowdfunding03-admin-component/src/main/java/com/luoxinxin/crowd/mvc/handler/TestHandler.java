@@ -70,6 +70,8 @@ public class TestHandler {
         logger.info("judgeResult="+judgeResult);
         List<Admin> adminList = adminService.getAll();
         modelMap.addAttribute("adminList", adminList);
+        String a = null;
+        System.out.println(a.length());
         return "target";
     }
 
@@ -79,7 +81,8 @@ public class TestHandler {
         boolean judgeResult = CrowdUtil.judgeRequestType(request);
         logger.info("judgeResult="+judgeResult);
         //logger.info(student.toString());
-
+        String a = null;
+        System.out.println(a.length());
         return "success";
     }
 
@@ -92,14 +95,6 @@ public class TestHandler {
         return resultEntity;
     }
 
-    @RequestMapping("/test/ssm_util.html")
-    public String testSsmUtil(ModelMap modelMap, HttpServletRequest request){
-        boolean judgeResult = CrowdUtil.judgeRequestType(request);
-        logger.info("judgeResult="+judgeResult);
-        List<Admin> adminList = adminService.getAll();
-        modelMap.addAttribute("adminList", adminList);
-        return "target";
-    }
 
 
 }
